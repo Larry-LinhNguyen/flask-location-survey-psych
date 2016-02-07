@@ -26,6 +26,11 @@ def add_data():
     print request.data
     data = json.loads(request.data)
     print data
+    location = data.get("location")
+    shit = Data()
+    shit.data = location
+    db.session.add(shit)
+    db.session.commit()
     return "FTW"
 
 @app.route('/add_data_get', methods=['GET'])

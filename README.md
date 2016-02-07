@@ -24,4 +24,4 @@ Also create a database `db`.
 
 Make sure you have a Heroku account and follow steps here: https://devcenter.heroku.com/articles/getting-started-with-python#deploy-the-app
 
-Follow the steps on https://devcenter.heroku.com/articles/cleardb#provisioning-the-add-on to set up a MySQL add-on.
+Follow the steps on https://devcenter.heroku.com/articles/cleardb#provisioning-the-add-on to set up a MySQL add-on. When setting up the DATABASE_URL (the last step), remove `reconnect=true` from the end -- SQLAlchemy doesn't like that.

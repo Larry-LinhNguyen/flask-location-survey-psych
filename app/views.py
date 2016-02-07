@@ -46,4 +46,4 @@ def add_data_get():
 @app.route('/datas')
 def datas():
     datas = Data.query.order_by(desc(Data.created)).all()
-    return '<br>'.join([str(d.created) + ' ' + str(d.data) for d in datas])
+    return '<br>'.join([str(d.created) + ' ' + str(d.data.encode('utf-8')) for d in datas])

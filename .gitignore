@@ -1,3 +1,5 @@
+*.cer
+*.pem
 venv
 *.pyc
 .*
